@@ -1,0 +1,320 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f7f7f7;
+  background: #111;
+  line-height: 1.6;
+}
+
+.header-principal header {
+  min-height: 92vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.72)),
+    url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffcc29;
+}
+
+.menu {
+  display: flex;
+  gap: 22px;
+  list-style: none;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.menu a:hover {
+  color: #ffcc29;
+}
+
+.hero {
+  width: 100%;
+  max-width: 1180px;
+  margin: auto;
+  padding: 56px 24px 96px;
+}
+
+.hero h1 {
+  max-width: 780px;
+  font-size: clamp(42px, 7vw, 82px);
+  line-height: 1;
+  margin-bottom: 22px;
+}
+
+.hero p {
+  max-width: 560px;
+  font-size: 20px;
+  margin-bottom: 34px;
+  color: #e6e6e6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 26px;
+  background: #ffcc29;
+  color: #151515;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: white;
+}
+
+section {
+  padding: 72px 24px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 14px;
+  color: #ffcc29;
+}
+
+.section-text {
+  max-width: 720px;
+  color: #d8d8d8;
+  margin-bottom: 36px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card {
+  background: #1d1d1d;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 26px;
+}
+
+.card h3 {
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #d8d8d8;
+}
+
+.planes {
+  background: #181818;
+}
+
+.price {
+  font-size: 36px;
+  color: #ffcc29;
+  font-weight: bold;
+  margin: 14px 0;
+}
+
+.clases {
+  background:
+    linear-gradient(rgba(17,17,17,.86), rgba(17,17,17,.9)),
+    url("https://images.unsplash.com/photo-1549060279-7e168fcee0c2?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.contacto {
+  background: #101010;
+}
+
+form {
+  max-width: 620px;
+  display: grid;
+  gap: 16px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #383838;
+  border-radius: 6px;
+  background: #1d1d1d;
+  color: white;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.error {
+  color: #ff4d4d;
+  font-size: 14px;
+  min-height: 18px;
+}
+
+.correcto {
+  border: 2px solid #28a745 !important;
+}
+
+.incorrecto {
+  border: 2px solid #dc3545 !important;
+}
+
+.plan-card {
+  transition: .3s;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+}
+
+.plan-card.seleccionado {
+  border: 2px solid #ffcc29;
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(255,204,41,.4);
+}
+
+.seleccionar-plan {
+  margin-top: 20px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.75);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenido {
+  width: 90%;
+  max-width: 420px;
+  background: #1d1d1d;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px solid #ffcc29;
+  text-align: center;
+}
+
+.modal-contenido h2 {
+  color: #ffcc29;
+  margin-bottom: 20px;
+}
+
+footer {
+  padding: 28px;
+  text-align: center;
+  background: #080808;
+  color: #bdbdbd;
+}
+
+@media(max-width:991px){
+
+nav{
+flex-direction:column;
+text-align:center;
+}
+
+.menu{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.hero{
+text-align:center;
+}
+
+}
+
+@media(max-width:767px){
+
+.logo{
+font-size:24px;
+}
+
+.menu{
+flex-direction:column;
+align-items:center;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+.section-title{
+text-align:center;
+}
+
+.section-text{
+text-align:center;
+}
+
+.btn{
+width:100%;
+text-align:center;
+}
+
+footer{
+font-size:14px;
+}
+
+}
